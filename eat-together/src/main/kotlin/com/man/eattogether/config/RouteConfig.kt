@@ -11,7 +11,6 @@ class RouteConfig {
     @Bean
     fun memberRoute(memberHandler: MemberHandler) = coRouter {
         GET("/members", memberHandler::findAll)
-        POST("/members", memberHandler::addMember)
+        POST("/members", memberHandler::register)
     }
-
 }
